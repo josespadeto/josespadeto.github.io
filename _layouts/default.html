@@ -6,15 +6,15 @@
     <title>{{ page.title }} | Dr. José Spadeto</title>
     <meta name="description" content="{{ page.description }}">
     
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <!-- FONTES PREMIUM: Inter + Playfair Display (Editorial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- AOS (Animate On Scroll) - Leve e Nativo -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header Minimalista Fixo -->
     <header class="site-header">
         <div class="container header-inner">
             <a href="/" class="logo">Dr. José Spadeto</a>
@@ -29,21 +29,19 @@
 
     {{ content }}
 
-    <!-- Footer Discreto -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 Dr. José Spadeto. Desenvolvimento Web com Precisão Médica.</p>
         </div>
     </footer>
 
-    <!-- Scripts Leves -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 900,          // Movimento lento = elegância
-        easing: 'ease-out-cubic', // Curva natural, não linear
-        once: true,             // Anima apenas uma vez ao rolar
-        offset: 100             // Gatilho antes de entrar na tela
+        duration: 1000,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)', /* Curva física premium */
+        once: true,
+        offset: 120
       });
     </script>
 </body>
