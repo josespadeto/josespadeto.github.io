@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Dr. José Spadeto</title>
+    <title>{{ page.title }} | José Spadeto</title>
     <meta name="description" content="{{ page.description }}">
     
-    <!-- FONTES PREMIUM: Inter + Playfair Display (Editorial) -->
+    <!-- Fontes Premium: Inter (Clareza) + Playfair Display (Autoridade Sutil) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Minimalista e Fixo -->
     <header class="site-header">
         <div class="container header-inner">
-            <a href="/" class="logo">Dr. José Spadeto</a>
+            <a href="/" class="logo">José Spadeto</a>
             <nav class="main-nav">
+                <a href="#trabalhos">Trabalhos</a>
+                <a href="#como">Como funciona</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#portfolio">Projetos</a>
-                <a href="#contato" class="btn-nav">Diagnóstico Digital</a>
+                <a href="#contato" class="btn-nav">WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -30,19 +31,15 @@
     {{ content }}
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Dr. José Spadeto. Desenvolvimento Web com Precisão Médica.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 José Spadeto. Sites simples que funcionam.</p>
+            <a href="#" class="back-to-top">Voltar ao topo ↑</a>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        easing: 'cubic-bezier(0.16, 1, 0.3, 1)', /* Curva física premium */
-        once: true,
-        offset: 120
-      });
+      AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
     </script>
 </body>
 </html>
