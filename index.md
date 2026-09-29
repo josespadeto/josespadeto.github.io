@@ -4,82 +4,108 @@ title: Dr. José Spadeto | Desenvolvimento Web & Consultoria Digital
 description: Sites estáticos rápidos, seguros e precisos. Desenvolvidos com rigor técnico e visão médica.
 ---
 
-<!-- HERO SECTION: Imagem Simples + Ken Burns Sutil -->
+<!-- HERO SECTION -->
 <section class="hero-minimal">
-    <div class="hero-bg ken-burns" 
-         style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
-    </div>
-    <div class="hero-overlay">
-        <div class="container hero-content" data-aos="fade-up">
-            <h1>Sites que respiram precisão.</h1>
-            <p>Desenvolvimento web estático com a mesma atenção aos detalhes da medicina.<br>Sem plugins, sem lentidão, sem surpresas.</p>
-            <a href="#contato" class="btn-primary btn-pulse">Agende Diagnóstico Digital</a>
-        </div>
+    <div class="hero-bg" style="background-image: url('/assets/images/hero-workspace.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content" data-aos="fade-up">
+        <h1>Sites que respiram<br>precisão.</h1>
+        <p>Desenvolvimento web estático com a mesma atenção aos detalhes da medicina.<br>Sem plugins, sem lentidão, sem surpresas.</p>
+        <a href="#contato" class="btn-primary">Agende Diagnóstico Digital</a>
     </div>
 </section>
 
-<!-- SOBRE: Autoridade Humana -->
+<!-- SOBRE: AUTORIDADE HUMANA + TÉCNICA -->
 <section id="sobre" class="section-sobre container">
     <div class="grid-sobre">
         <div class="sobre-texto" data-aos="fade-right" data-aos-duration="1000">
-            <h2>Médico. Desenvolvedor. Consultor.</h2>
+            <span class="kicker">Quem Sou</span>
+            <h2>Médico. Desenvolvedor.<br>Consultor de Precisão.</h2>
             <p>Após 30 anos cuidando de vidas, apliquei o mesmo rigor diagnóstico ao desenvolvimento web. Não crio sites genéricos; construo soluções digitais seguras, rápidas e eternas.</p>
-            <p>Seu site não deve ser um peso. Deve ser um ativo leve, preciso e confiável.</p>
+            <p>Seu site não deve ser um peso. Deve ser um ativo leve, preciso e confiável — como um bom diagnóstico.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-num">30+</span>
+                    <span class="stat-label">Anos de Experiência Profissional</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Sites Estáticos Otimizados</span>
+                </div>
+            </div>
         </div>
         <div class="sobre-imagem" data-aos="fade-left" data-aos-delay="200">
-            <!-- Placeholder para foto profissional sua -->
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. José Spadeto">
+            <!-- Substitua por sua foto profissional real -->
+            <img src="/assets/images/sobre-dr-spadeto.jpg" alt="Dr. José Spadeto em seu workspace">
         </div>
     </div>
 </section>
 
-<!-- SERVIÇOS: Cards com Micro-interação -->
+<!-- SERVIÇOS: CLAREZA + BENEFÍCIO DE NEGÓCIO -->
 <section id="servicos" class="section-servicos">
     <div class="container">
-        <h2 class="text-center" data-aos="fade-up">O Que Entrego</h2>
+        <span class="kicker text-center" data-aos="fade-up">O Que Entrego</span>
+        <h2 class="text-center section-title" data-aos="fade-up">Soluções Digitais Sem Complicação</h2>
+        
         <div class="grid-servicos">
             <div class="card-servico" data-aos="fade-up" data-aos-delay="100">
-                <h3>Sites Estáticos</h3>
-                <p>Velocidade máxima, segurança absoluta. Sem banco de dados, sem hacks.</p>
+                <div class="serv-icon"></div>
+                <h3>Sites Estáticos Ultra-Rápidos</h3>
+                <p>Velocidade máxima, segurança absoluta. Sem banco de dados, sem hacks, sem mensalidades de hospedagem cara. Seu site carrega em menos de 1 segundo.</p>
             </div>
+            
             <div class="card-servico" data-aos="fade-up" data-aos-delay="200">
-                <h3>Otimização SEO</h3>
-                <p>Estrutura técnica perfeita para o Google entender seu valor.</p>
+                <div class="serv-icon">🔍</div>
+                <h3>SEO Técnico Impecável</h3>
+                <p>Estrutura de código limpa que o Google ama. Meta tags otimizadas, schema markup e performance que ranqueia organicamente.</p>
             </div>
+            
             <div class="card-servico" data-aos="fade-up" data-aos-delay="300">
-                <h3>Consultoria Digital</h3>
-                <p>Diagnóstico honesto. Só recomendo o que seu negócio realmente precisa.</p>
+                <div class="serv-icon">🩺</div>
+                <h3>Diagnóstico Digital Honesto</h3>
+                <p>Análise técnica sem venda agressiva. Só recomendo o que seu negócio realmente precisa, com transparência total sobre custos e prazos.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PORTFÓLIO: Imagens Limpas com Hover Tátil -->
+<!-- PORTFÓLIO: PROVA SOCIAL VISUAL -->
 <section id="portfolio" class="section-portfolio container">
-    <h2 class="text-center" data-aos="fade-up">Projetos Selecionados</h2>
+    <span class="kicker text-center" data-aos="fade-up">Trabalhos Selecionados</span>
+    <h2 class="text-center section-title" data-aos="fade-up">Projetos que Geram Resultado</h2>
+    
     <div class="grid-portfolio">
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800">
+        <article class="projeto-item" data-aos="zoom-in" data-aos-duration="800">
             <div class="projeto-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pousada Modelo">
+                <img src="/assets/images/projeto-pousada-recanto.jpg" alt="Site Pousada Recanto do Cerrado">
             </div>
-            <h3>Pousada Recanto</h3>
-            <p>Site institucional focado em conversão WhatsApp.</p>
-        </div>
-        <div class="projeto-item" data-aos="zoom-in" data-aos-delay="150">
+            <div class="projeto-info">
+                <h3>Pousada Recanto do Cerrado</h3>
+                <p>Site institucional focado em conversão via WhatsApp. Redução de 70% na dependência de OTAs.</p>
+                <a href="#" class="projeto-link">Ver Case →</a>
+            </div>
+        </article>
+        
+        <article class="projeto-item" data-aos="zoom-in" data-aos-delay="150">
             <div class="projeto-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Agência DF Turismo">
+                <img src="/assets/images/projeto-df-turismo.jpg" alt="Site DF Turismo Agência">
             </div>
-            <h3>DF Turismo</h3>
-            <p>Redução de dependência de redes sociais.</p>
-        </div>
+            <div class="projeto-info">
+                <h3>DF Turismo</h3>
+                <p>Plataforma de reservas diretas. Eliminação da taxa de intermediação e aumento de margem líquida.</p>
+                <a href="#" class="projeto-link">Ver Case →</a>
+            </div>
+        </article>
     </div>
 </section>
 
-<!-- CTA FINAL: Encantamento Silencioso -->
+<!-- CTA FINAL: CONVERSÃO COM AUTORIDADE -->
 <section id="contato" class="section-contato">
     <div class="container text-center" data-aos="fade-up">
+        <span class="kicker" style="color: rgba(255,255,255,0.7);">Próximo Passo</span>
         <h2>Pronto para um site que funciona?</h2>
-        <p>Sem promessas vazias. Apenas precisão técnica e resultado real.</p>
+        <p>Sem promessas vazias. Apenas precisão técnica, transparência e resultado real.<br>Vamos conversar sobre o seu projeto.</p>
         <a href="https://wa.me/5561999999999" class="btn-primary btn-large" target="_blank">Iniciar Conversa no WhatsApp</a>
+        <p class="cta-subtext">Resposta em até 24h úteis. Sem compromisso.</p>
     </div>
 </section>
