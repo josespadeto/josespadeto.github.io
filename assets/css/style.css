@@ -1,152 +1,104 @@
-/* =========================================
-   VARIÁVEIS E RESET CLÍNICO
-   ========================================= */
-:root {
-    --cor-primaria: #003580; /* Azul Médico/Confiança */
-    --cor-texto: #1a1a1a;
-    --cor-fundo: #ffffff;
-    --cor-cinza: #f8f9fa;
-    --transicao-suave: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* KICKERS EDITORIAIS */
+.kicker {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cor-primaria);
+    margin-bottom: 16px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+.text-center .kicker { text-align: center; }
 
-body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    color: var(--cor-texto);
-    line-height: 1.7;
-    background: var(--cor-fundo);
-    overflow-x: hidden; /* Evita scroll horizontal por animações */
+/* STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.text-center { text-align: center; }
-
-/* =========================================
-   HEADER MINIMALISTA
-   ========================================= */
-.site-header {
-    position: fixed; top: 0; width: 100%;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000; padding: 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+.stat-num {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    line-height: 1;
+    margin-bottom: 8px;
 }
 
-.header-inner { display: flex; justify-content: space-between; align-items: center; }
-
-.logo { font-size: 1.4rem; font-weight: 700; color: var(--cor-primaria); text-decoration: none; }
-
-.main-nav a {
-    margin-left: 30px; text-decoration: none; color: var(--cor-texto);
-    font-size: 0.95rem; transition: var(--transicao-suave);
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
 }
 
-.main-nav a:hover { color: var(--cor-primaria); }
-
-.btn-nav {
-    background: var(--cor-primaria); color: white !important;
-    padding: 10px 24px; border-radius: 50px; font-weight: 600;
+/* SERVIÇOS ICONES E ESTILO */
+.serv-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-.btn-nav:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,53,128,0.2); }
-
-/* =========================================
-   HERO COM KEN BURNS SUTIL
-   ========================================= */
-.hero-minimal {
-    position: relative; height: 90vh;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden; color: white;
+.card-servico h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
 }
 
-.hero-bg {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover; background-position: center;
-    z-index: -2;
+/* PORTFOLIO INFO */
+.projeto-info h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
 }
 
-/* ANIMAÇÃO CHAVE: Ken Burns Ultra-Lento */
-.ken-burns { animation: kenBurns 25s ease-in-out infinite alternate; }
-
-@keyframes kenBurns {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.08); } /* Zoom máximo de apenas 8% */
+.projeto-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
-.hero-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,53,128,0.6), rgba(0,0,0,0.7));
-    z-index: -1;
+.projeto-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: all 0.3s var(--curva-premium);
 }
 
-.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -1px; }
-.hero-content p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
-
-/* BOTÃO PRIMÁRIO COM PULSO DISCRETO */
-.btn-primary {
-    display: inline-block; background: white; color: var(--cor-primaria);
-    padding: 16px 40px; border-radius: 50px; text-decoration: none;
-    font-weight: 700; font-size: 1.1rem; transition: var(--transicao-suave);
+.projeto-link:hover {
+    transform: translateX(4px);
+    opacity: 0.8;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+/* CTA SUBTEXT */
+.cta-subtext {
+    margin-top: 24px;
+    font-size: 0.9rem;
+    opacity: 0.7 !important;
+    font-weight: 400;
 }
 
-/* =========================================
-   SEÇÕES GERAIS
-   ========================================= */
-section { padding: 100px 0; }
-
-.grid-sobre { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.sobre-imagem img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-.section-servicos { background: var(--cor-cinza); }
-.grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-
-.card-servico {
-    background: white; padding: 40px; border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    transition: var(--transicao-suave); /* MICRO-INTERAÇÃO TÁTIL */
+/* SECTION TITLE REFINADA */
+.section-title {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    color: var(--cor-primaria);
 }
 
-.card-servico:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
-
-/* PORTFÓLIO COM HOVER NA IMAGEM */
-.grid-portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-top: 50px; }
-
-.projeto-img-wrapper {
-    overflow: hidden; border-radius: 12px; margin-bottom: 20px;
-    aspect-ratio: 16/9;
-}
-
-.projeto-img-wrapper img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.6s ease; /* ZOOM LENTO NO HOVER */
-}
-
-.projeto-item:hover .projeto-img-wrapper img { transform: scale(1.05); }
-
-/* CONTATO */
-.section-contato { background: var(--cor-primaria); color: white; padding: 120px 0; }
-.section-contato h2 { font-size: 2.5rem; margin-bottom: 20px; }
-.section-contato p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
-
-.btn-large { font-size: 1.3rem; padding: 20px 50px; }
-
-/* FOOTER */
-.site-footer { background: #111; color: #666; padding: 40px 0; text-align: center; font-size: 0.9rem; }
-
-/* RESPONSIVIDADE BÁSICA */
+/* RESPONSIVIDADE DOS NOVOS ELEMENTOS */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .grid-sobre { grid-template-columns: 1fr; }
-    .main-nav { display: none; } /* Simplificação para mobile neste exercício */
-}
-
-/* RESPEITO A PREFERÊNCIAS DE MOVIMENTO */
-@media (prefers-reduced-motion: reduce) {
-    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .stats-grid { grid-template-columns: 1fr; gap: 24px; }
+    .stat-num { font-size: 2rem; }
+    .grid-portfolio { gap: 40px; }
 }
