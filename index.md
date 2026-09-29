@@ -1,111 +1,99 @@
 ---
 layout: default
-title: Dr. José Spadeto | Desenvolvimento Web & Consultoria Digital
-description: Sites estáticos rápidos, seguros e precisos. Desenvolvidos com rigor técnico e visão médica.
+title: José Spadeto · Sites simples
+description: Sites simples, claros e rápidos. Antes de construir, eu escuto. Desenvolvimento web com atenção médica em Brasília.
 ---
 
-<!-- HERO SECTION -->
-<section class="hero-minimal">
-    <div class="hero-bg" style="background-image: url('/assets/images/hero-workspace.jpg');"></div>
-    <div class="hero-overlay"></div>
+<!-- HERO SECTION: Clareza Absoluta -->
+<section class="hero-simple">
     <div class="container hero-content" data-aos="fade-up">
-        <h1>Sites que respiram<br>precisão.</h1>
-        <p>Desenvolvimento web estático com a mesma atenção aos detalhes da medicina.<br>Sem plugins, sem lentidão, sem surpresas.</p>
-        <a href="#contato" class="btn-primary">Agende Diagnóstico Digital</a>
+        <h1>Sites simples,<br>claros e rápidos.</h1>
+        <p class="hero-subtitle">Antes de construir, eu escuto. Depois faço só o que o seu negócio precisa.</p>
+        <a href="#contato" class="btn-primary">Pedir orçamento</a>
     </div>
 </section>
 
-<!-- SOBRE: AUTORIDADE HUMANA + TÉCNICA -->
-<section id="sobre" class="section-sobre container">
-    <div class="grid-sobre">
-        <div class="sobre-texto" data-aos="fade-right" data-aos-duration="1000">
-            <span class="kicker">Quem Sou</span>
-            <h2>Médico. Desenvolvedor.<br>Consultor de Precisão.</h2>
-            <p>Após 30 anos cuidando de vidas, apliquei o mesmo rigor diagnóstico ao desenvolvimento web. Não crio sites genéricos; construo soluções digitais seguras, rápidas e eternas.</p>
-            <p>Seu site não deve ser um peso. Deve ser um ativo leve, preciso e confiável — como um bom diagnóstico.</p>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-num">30+</span>
-                    <span class="stat-label">Anos de Experiência Profissional</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Sites Estáticos Otimizados</span>
-                </div>
-            </div>
-        </div>
-        <div class="sobre-imagem" data-aos="fade-left" data-aos-delay="200">
-            <!-- Substitua por sua foto profissional real -->
-            <img src="/assets/images/sobre-dr-spadeto.jpg" alt="Dr. José Spadeto em seu workspace">
-        </div>
+<!-- TRABALHOS: Prova Visual Necessária -->
+<section id="trabalhos" class="section-trabalhos container">
+    <span class="kicker" data-aos="fade-up">Trabalhos</span>
+    <h2 data-aos="fade-up">O que já construí</h2>
+    <div class="grid-trabalhos">
+        <article class="card-trabalho" data-aos="fade-up" data-aos-delay="100">
+            <div class="img-wrapper"><img src="/assets/images/projeto-pousada.jpg" alt="Site Pousada Recanto"></div>
+            <h3>Pousada Recanto</h3>
+            <p>Site focado em reservas diretas via WhatsApp.</p>
+        </article>
+        <article class="card-trabalho" data-aos="fade-up" data-aos-delay="200">
+            <div class="img-wrapper"><img src="/assets/images/projeto-agencia.jpg" alt="Site DF Turismo"></div>
+            <h3>DF Turismo</h3>
+            <p>Redução da dependência de redes sociais.</p>
+        </article>
     </div>
 </section>
 
-<!-- SERVIÇOS: CLAREZA + BENEFÍCIO DE NEGÓCIO -->
-<section id="servicos" class="section-servicos">
+<!-- COMO FUNCIONA: Processo Transparente -->
+<section id="como" class="section-como">
     <div class="container">
-        <span class="kicker text-center" data-aos="fade-up">O Que Entrego</span>
-        <h2 class="text-center section-title" data-aos="fade-up">Soluções Digitais Sem Complicação</h2>
+        <span class="kicker text-center" data-aos="fade-up">Como funciona</span>
+        <h2 class="text-center" data-aos="fade-up">Sem surpresas, passo a passo</h2>
         
-        <div class="grid-servicos">
-            <div class="card-servico" data-aos="fade-up" data-aos-delay="100">
-                <div class="serv-icon"></div>
-                <h3>Sites Estáticos Ultra-Rápidos</h3>
-                <p>Velocidade máxima, segurança absoluta. Sem banco de dados, sem hacks, sem mensalidades de hospedagem cara. Seu site carrega em menos de 1 segundo.</p>
+        <div class="grid-passos">
+            <div class="passo-item" data-aos="fade-up" data-aos-delay="100">
+                <span class="passo-num">1</span>
+                <h3>Conversa</h3>
+                <p>Você conta o que faz e o que precisa. Eu digo o que cabe em um site simples.</p>
             </div>
-            
-            <div class="card-servico" data-aos="fade-up" data-aos-delay="200">
-                <div class="serv-icon">🔍</div>
-                <h3>SEO Técnico Impecável</h3>
-                <p>Estrutura de código limpa que o Google ama. Meta tags otimizadas, schema markup e performance que ranqueia organicamente.</p>
+            <div class="passo-item" data-aos="fade-up" data-aos-delay="200">
+                <span class="passo-num">2</span>
+                <h3>Protótipo</h3>
+                <p>Você vê a página pronta antes de decidir e pede os ajustes.</p>
             </div>
-            
-            <div class="card-servico" data-aos="fade-up" data-aos-delay="300">
-                <div class="serv-icon">🩺</div>
-                <h3>Diagnóstico Digital Honesto</h3>
-                <p>Análise técnica sem venda agressiva. Só recomendo o que seu negócio realmente precisa, com transparência total sobre custos e prazos.</p>
+            <div class="passo-item" data-aos="fade-up" data-aos-delay="300">
+                <span class="passo-num">3</span>
+                <h3>No ar</h3>
+                <p>Publico o site, configuro o endereço e explico como pedir mudanças depois.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PORTFÓLIO: PROVA SOCIAL VISUAL -->
-<section id="portfolio" class="section-portfolio container">
-    <span class="kicker text-center" data-aos="fade-up">Trabalhos Selecionados</span>
-    <h2 class="text-center section-title" data-aos="fade-up">Projetos que Geram Resultado</h2>
-    
-    <div class="grid-portfolio">
-        <article class="projeto-item" data-aos="zoom-in" data-aos-duration="800">
-            <div class="projeto-img-wrapper">
-                <img src="/assets/images/projeto-pousada-recanto.jpg" alt="Site Pousada Recanto do Cerrado">
-            </div>
-            <div class="projeto-info">
-                <h3>Pousada Recanto do Cerrado</h3>
-                <p>Site institucional focado em conversão via WhatsApp. Redução de 70% na dependência de OTAs.</p>
-                <a href="#" class="projeto-link">Ver Case →</a>
-            </div>
-        </article>
-        
-        <article class="projeto-item" data-aos="zoom-in" data-aos-delay="150">
-            <div class="projeto-img-wrapper">
-                <img src="/assets/images/projeto-df-turismo.jpg" alt="Site DF Turismo Agência">
-            </div>
-            <div class="projeto-info">
-                <h3>DF Turismo</h3>
-                <p>Plataforma de reservas diretas. Eliminação da taxa de intermediação e aumento de margem líquida.</p>
-                <a href="#" class="projeto-link">Ver Case →</a>
-            </div>
-        </article>
+<!-- SOBRE: Autoridade Humana -->
+<section id="sobre" class="section-sobre container">
+    <div class="sobre-box" data-aos="fade-up">
+        <span class="kicker">JS</span>
+        <h2>Atenção médica aplicada ao digital</h2>
+        <p>Passei 30 anos cuidando de pessoas. Hoje uso a mesma atenção para construir sites simples que trabalham pelo seu negócio. Sem códigos desnecessários, sem lentidão, sem dor de cabeça.</p>
     </div>
 </section>
 
-<!-- CTA FINAL: CONVERSÃO COM AUTORIDADE -->
-<section id="contato" class="section-contato">
+<!-- FAQ: Quebra de Objeções -->
+<section class="section-faq container">
+    <span class="kicker text-center" data-aos="fade-up">Perguntas frequentes</span>
+    <div class="faq-list">
+        <details class="faq-item" data-aos="fade-up">
+            <summary>Quanto custa?</summary>
+            <p>Depende do que você precisa. No primeiro contato eu explico a faixa de preço, antes de qualquer compromisso.</p>
+        </details>
+        <details class="faq-item" data-aos="fade-up">
+            <summary>Quanto tempo leva?</summary>
+            <p>Depende do tamanho do site. Combinamos o prazo antes de começar.</p>
+        </details>
+        <details class="faq-item" data-aos="fade-up">
+            <summary>Preciso ter um endereço na internet?</summary>
+            <p>Se não tiver, eu oriento como escolher e registrar.</p>
+        </details>
+        <details class="faq-item" data-aos="fade-up">
+            <summary>Como peço mudanças depois?</summary>
+            <p>Você fala comigo pelo WhatsApp e combinamos o que muda e quando.</p>
+        </details>
+    </div>
+</section>
+
+<!-- CTA FINAL: Conversão Direta -->
+<section id="contato" class="section-contato-final">
     <div class="container text-center" data-aos="fade-up">
-        <span class="kicker" style="color: rgba(255,255,255,0.7);">Próximo Passo</span>
-        <h2>Pronto para um site que funciona?</h2>
-        <p>Sem promessas vazias. Apenas precisão técnica, transparência e resultado real.<br>Vamos conversar sobre o seu projeto.</p>
-        <a href="https://wa.me/5561999999999" class="btn-primary btn-large" target="_blank">Iniciar Conversa no WhatsApp</a>
-        <p class="cta-subtext">Resposta em até 24h úteis. Sem compromisso.</p>
+        <h2>Vamos conversar sobre o seu site?</h2>
+        <p>Mande uma mensagem contando o que você faz. Respondo com o que dá para fazer.</p>
+        <a href="https://wa.me/5561999999999" class="btn-primary btn-large" target="_blank">Chamar no WhatsApp</a>
     </div>
 </section>
