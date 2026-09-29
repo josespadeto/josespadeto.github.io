@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Dr. José Spadeto</title>
+    <meta name="description" content="{{ page.description }}">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- AOS (Animate On Scroll) - Leve e Nativo -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Minimalista Fixo -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">Dr. José Spadeto</a>
+            <nav class="main-nav">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#portfolio">Projetos</a>
+                <a href="#contato" class="btn-nav">Diagnóstico Digital</a>
+            </nav>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <!-- Footer Discreto -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Dr. José Spadeto. Desenvolvimento Web com Precisão Médica.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts Leves -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,          // Movimento lento = elegância
+        easing: 'ease-out-cubic', // Curva natural, não linear
+        once: true,             // Anima apenas uma vez ao rolar
+        offset: 100             // Gatilho antes de entrar na tela
+      });
+    </script>
+</body>
+</html>
