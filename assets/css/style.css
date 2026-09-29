@@ -1,6 +1,4 @@
-/* =========================================
-   VARIÁVEIS DE TEMA E CORES DINÂMICAS
-   ========================================= */
+/* VARIÁVEIS E RESET */
 :root {
     --cor-texto: #1a1a1a;
     --cor-cinza: #666;
@@ -8,37 +6,27 @@
     --cor-bg-suave: #f8f9fa;
     --fonte-corpo: 'Inter', sans-serif;
     --fonte-titulo: 'Playfair Display', serif;
-    
-    /* Cores dos Temas Dinâmicos */
-    --theme-recanto: #f2f4f0; /* Verde Pousada */
-    --theme-turismo: #f0f4fa; /* Azul Agência */
-    --theme-cantar: #f9f7f2;  /* Bege Editorial */
 }
 
-/* Transição Suave do Background */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
     font-family: var(--fonte-corpo);
     color: var(--cor-texto);
     line-height: 1.7;
     background-color: #ffffff;
-    transition: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    /* TRANSIÇÃO SUAVE ESSENCIAL PARA O EFEITO DE COR */
+    transition: background-color 0.5s ease; 
     -webkit-font-smoothing: antialiased;
 }
 
-/* Classes de Tema Ativas */
-body.theme-recanto { background-color: var(--theme-recanto); }
-body.theme-turismo { background-color: var(--theme-turismo); }
-body.theme-cantar  { background-color: var(--theme-cantar); }
-
-/* Reset Básico */
-* { margin: 0; padding: 0; box-sizing: border-box; }
 .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .text-center { text-align: center; }
 
-/* Header */
+/* HEADER */
 .site-header {
     position: fixed; top: 0; width: 100%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
     z-index: 1000; padding: 20px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -49,52 +37,38 @@ body.theme-cantar  { background-color: var(--theme-cantar); }
 .main-nav a:hover { color: var(--cor-texto); }
 .btn-nav { background: var(--cor-destaque); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; }
 
-/* Hero */
+/* HERO */
 .hero-simple { padding: 180px 0 120px; min-height: 80vh; display: flex; align-items: center; }
 .hero-content h1 { font-family: var(--fonte-titulo); font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em; }
 .hero-subtitle { font-size: 1.25rem; color: var(--cor-cinza); max-width: 600px; margin-bottom: 40px; font-weight: 300; }
 .btn-primary { display: inline-block; background: var(--cor-destaque); color: white; padding: 16px 36px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(10,37,64,0.2); }
 
-/* Seções Gerais */
+/* SEÇÕES GERAIS */
 section { padding: 100px 0; }
 .kicker { display: block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cor-cinza); margin-bottom: 16px; }
 h2 { font-family: var(--fonte-titulo); font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 40px; letter-spacing: -0.02em; }
 
-/* CARDS DE TRABALHO COM MOCKUPS COLORIDOS */
+/* TRABALHOS E MOCKUPS */
 .grid-trabalhos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
-.card-trabalho { cursor: pointer; transition: transform 0.4s ease; }
+.card-trabalho { cursor: pointer; transition: transform 0.3s ease; }
 .card-trabalho:hover { transform: translateY(-5px); }
 .card-trabalho h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .card-trabalho p { color: var(--cor-cinza); font-size: 0.95rem; }
 
-/* Mockup Visual Interno do Card */
-.mockup-preview {
-    width: 100%; aspect-ratio: 16/10; border-radius: 8px;
-    margin-bottom: 20px; padding: 20px;
-    display: flex; flex-direction: column; gap: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+.mockup-preview { width: 100%; height: 160px; border-radius: 8px; margin-bottom: 20px; }
+.mockup-dark { background: #1a1a1a; }
+.mockup-blue { background: #2563eb; }
+.mockup-yellow { background: #eab308; }
 
-/* Cores Específicas dos Mockups */
-.mockup-recanto { background: #1a1a1a; }
-.mockup-turismo { background: #2563eb; }
-.mockup-cantar  { background: #eab308; }
-
-/* Elementos Internos do Mockup (Linhas e Blocos) */
-.mockup-line { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.4); }
-.mockup-line.short { width: 40%; }
-.mockup-line.medium { width: 70%; }
-.mockup-block { height: 30px; border-radius: 4px; background: rgba(255,255,255,0.2); margin-top: auto; }
-
-/* Como Funciona */
+/* COMO FUNCIONA */
 .section-como { background: var(--cor-bg-suave); }
 .grid-passos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
 .passo-num { display: inline-block; font-family: var(--fonte-titulo); font-size: 3rem; color: rgba(10,37,64,0.1); line-height: 1; margin-bottom: 16px; }
 .passo-item h3 { font-size: 1.4rem; margin-bottom: 12px; }
 .passo-item p { color: var(--cor-cinza); }
 
-/* Sobre */
+/* SOBRE */
 .sobre-box { background: var(--cor-bg-suave); padding: 60px; border-radius: 12px; text-align: center; }
 .sobre-box h2 { margin-bottom: 20px; }
 .sobre-box p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: var(--cor-cinza); }
@@ -107,19 +81,19 @@ h2 { font-family: var(--fonte-titulo); font-size: clamp(2rem, 4vw, 2.8rem); marg
 .faq-item[open] summary::after { content: '−'; }
 .faq-item p { margin-top: 16px; color: var(--cor-cinza); line-height: 1.6; }
 
-/* Contato Final */
+/* CONTATO FINAL */
 .section-contato-final { padding: 120px 0; }
 .section-contato-final h2 { margin-bottom: 16px; }
 .section-contato-final p { font-size: 1.2rem; color: var(--cor-cinza); margin-bottom: 40px; }
 .btn-large { padding: 20px 48px; font-size: 1.2rem; }
 
-/* Footer */
+/* FOOTER */
 .site-footer { background: #111; color: #666; padding: 40px 0; font-size: 0.9rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }
 .back-to-top { color: #888; text-decoration: none; transition: color 0.3s; }
 .back-to-top:hover { color: white; }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
     .hero-simple { padding: 140px 0 80px; }
     .main-nav { display: none; }
