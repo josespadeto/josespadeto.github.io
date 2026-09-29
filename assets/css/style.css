@@ -1,154 +1,38 @@
-/* VARIÁVEIS DE CLAREZA E CONFIANÇA */
+/* VARIÁVEIS DINÂMICAS PARA INTERAÇÃO */
 :root {
-    --cor-texto: #1a1a1a;
-    --cor-cinza: #666;
-    --cor-fundo: #ffffff;
-    --cor-destaque: #0a2540; /* Azul profundo, sério */
-    --cor-bg-suave: #f8f9fa;
-    --fonte-corpo: 'Inter', sans-serif;
-    --fonte-titulo: 'Playfair Display', serif;
+    --cor-fundo-dinamica: #ffffff; /* Cor padrão */
+    --transicao-cor: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: var(--fonte-corpo);
-    color: var(--cor-texto);
-    line-height: 1.7;
-    background: var(--cor-fundo);
-    -webkit-font-smoothing: antialiased;
+    background-color: var(--cor-fundo-dinamica);
+    transition: var(--transicao-cor); /* Transição suave de cor em todo o body */
 }
 
-.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-.text-center { text-align: center; }
-
-/* HEADER LIMPO */
-.site-header {
-    position: fixed; top: 0; width: 100%;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000; padding: 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+/* TRABALHOS COM CORES ESPECÍFICAS */
+.card-trabalho {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease;
 }
 
-.header-inner { display: flex; justify-content: space-between; align-items: center; }
-
-.logo { 
-    font-family: var(--fonte-titulo); 
-    font-size: 1.4rem; font-weight: 600; 
-    color: var(--cor-texto); text-decoration: none; 
+.card-trabalho:hover {
+    transform: translateY(-5px);
 }
 
-.main-nav a {
-    margin-left: 24px; text-decoration: none; color: var(--cor-cinza);
-    font-size: 0.9rem; font-weight: 500; transition: color 0.3s ease;
-}
+/* Cores específicas por projeto (definidas via data-attribute no HTML) */
+[data-theme="recanto"]:hover ~ .bg-overlay,
+body.theme-recanto { --cor-fundo-dinamica: #f4f7f0; } /* Verde pousada sutil */
 
-.main-nav a:hover { color: var(--cor-texto); }
+[data-theme="turismo"]:hover ~ .bg-overlay,
+body.theme-turismo { --cor-fundo-dinamica: #f0f4f8; } /* Azul agência sutil */
 
-.btn-nav {
-    background: var(--cor-destaque); color: white !important;
-    padding: 10px 20px; border-radius: 6px; font-weight: 600;
-}
-
-/* HERO: FOCO TOTAL NA MENSAGEM */
-.hero-simple {
-    padding: 180px 0 120px;
-    min-height: 80vh; display: flex; align-items: center;
-}
-
-.hero-content h1 {
-    font-family: var(--fonte-titulo);
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
-    line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem; color: var(--cor-cinza);
-    max-width: 600px; margin-bottom: 40px; font-weight: 300;
-}
-
-.btn-primary {
-    display: inline-block; background: var(--cor-destaque); color: white;
-    padding: 16px 36px; border-radius: 6px; text-decoration: none;
-    font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease;
-}
-
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(10,37,64,0.2); }
-
-/* SEÇÕES GERAIS */
-section { padding: 100px 0; }
-.kicker {
-    display: block; font-size: 0.8rem; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--cor-cinza); margin-bottom: 16px;
-}
-
-h2 {
-    font-family: var(--fonte-titulo);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    margin-bottom: 40px; letter-spacing: -0.02em;
-}
-
-/* TRABALHOS */
-.grid-trabalhos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
-.img-wrapper {
-    aspect-ratio: 4/3; background: #eee; border-radius: 8px;
-    overflow: hidden; margin-bottom: 16px;
-}
-.img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.card-trabalho:hover .img-wrapper img { transform: scale(1.03); }
-.card-trabalho h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.card-trabalho p { color: var(--cor-cinza); font-size: 0.95rem; }
-
-/* COMO FUNCIONA */
-.section-como { background: var(--cor-bg-suave); }
-.grid-passos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
-.passo-num {
-    display: inline-block; font-family: var(--fonte-titulo);
-    font-size: 3rem; color: rgba(10,37,64,0.1); line-height: 1; margin-bottom: 16px;
-}
-.passo-item h3 { font-size: 1.4rem; margin-bottom: 12px; }
-.passo-item p { color: var(--cor-cinza); }
-
-/* SOBRE */
-.sobre-box {
-    background: var(--cor-bg-suave); padding: 60px;
-    border-radius: 12px; text-align: center;
-}
-.sobre-box h2 { margin-bottom: 20px; }
-.sobre-box p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: var(--cor-cinza); }
-
-/* FAQ */
-.faq-list { max-width: 700px; margin: 40px auto 0; }
-.faq-item {
-    border-bottom: 1px solid rgba(0,0,0,0.1); padding: 20px 0;
-}
-.faq-item summary {
-    font-weight: 600; cursor: pointer; list-style: none;
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 1.1rem;
-}
-.faq-item summary::after { content: '+'; font-size: 1.5rem; font-weight: 300; }
-.faq-item[open] summary::after { content: '−'; }
-.faq-item p { margin-top: 16px; color: var(--cor-cinza); line-height: 1.6; }
-
-/* CONTATO FINAL */
-.section-contato-final { padding: 120px 0; }
-.section-contato-final h2 { margin-bottom: 16px; }
-.section-contato-final p { font-size: 1.2rem; color: var(--cor-cinza); margin-bottom: 40px; }
-.btn-large { padding: 20px 48px; font-size: 1.2rem; }
-
-/* FOOTER */
-.site-footer { background: #111; color: #666; padding: 40px 0; font-size: 0.9rem; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; }
-.back-to-top { color: #888; text-decoration: none; transition: color 0.3s; }
-.back-to-top:hover { color: white; }
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero-simple { padding: 140px 0 80px; }
-    .main-nav { display: none; } /* Simplificação extrema para mobile */
-    .sobre-box { padding: 40px 24px; }
-    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+/* Overlay opcional para suavizar ainda mais a transição */
+.bg-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--cor-fundo-dinamica);
+    z-index: -1;
+    transition: var(--transicao-cor);
+    pointer-events: none;
 }
