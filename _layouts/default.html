@@ -6,17 +6,14 @@
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     
-    <!-- Fontes Premium -->
+    <!-- Fontes: Inter (Corpo) + Playfair Display (Títulos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="theme-default">
-    
-    <!-- Header Fixo Minimalista -->
+<body>
     <header class="site-header">
         <div class="container header-inner">
             <a href="/" class="logo">José Spadeto</a>
@@ -31,7 +28,6 @@
 
     {{ content }}
 
-    <!-- Footer Simples -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>&copy; 2026 José Spadeto. Sites simples que funcionam.</p>
@@ -39,24 +35,10 @@
         </div>
     </footer>
 
-    <!-- Scripts Essenciais -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SCRIPT DE COR DINÂMICA (Método Direto e Validado) -->
     <script>
-        // Inicialização AOS
-        if(typeof AOS !== 'undefined') {
-            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
-        }
-
-        // Sistema de Temas Dinâmicos (Hover nos Cards)
-        function setTheme(themeName) {
-            document.body.classList.remove('theme-recanto', 'theme-turismo', 'theme-cantar');
-            if(themeName) {
-                document.body.classList.add('theme-' + themeName);
-            }
-        }
-
-        function resetTheme() {
-            document.body.classList.remove('theme-recanto', 'theme-turismo', 'theme-cantar');
+        function setBg(color) {
+            document.body.style.backgroundColor = color;
         }
     </script>
 </body>
